@@ -1,0 +1,96 @@
+.hkcl-sc {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.hkcl-sc__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.hkcl-sc__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.hkcl-sc__card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1.5px solid rgba(0,0,0,0.07);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hkcl-sc__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--card-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.hkcl-sc__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
+  border-color: transparent;
+}
+
+.hkcl-sc__card:hover::before {
+  transform: scaleX(1);
+}
+
+.hkcl-sc__card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+  width: 62px;
+  height: 62px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hkcl-sc__card-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.hkcl-sc__card-desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.hkcl-sc__card-cta {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--card-color);
+  font-family: 'Raleway', sans-serif;
+  transition: gap 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+  .hkcl-sc__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .hkcl-sc__grid { grid-template-columns: 1fr; }
+  .hkcl-sc { padding: 60px 0; }
+}

@@ -1,0 +1,143 @@
+.hkcl-products { min-height: 100vh; }
+
+.hkcl-products__filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 48px 0 36px;
+  justify-content: center;
+}
+
+.hkcl-products__filter-btn {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 22px;
+  border-radius: 100px;
+  border: 2px solid var(--light-gray);
+  background: white;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hkcl-products__filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.hkcl-products__filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 16px rgba(232,97,10,0.25);
+}
+
+.hkcl-products__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-bottom: 80px;
+}
+
+.hkcl-products__card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20px;
+  border: 1.5px solid rgba(0,0,0,0.07);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.hkcl-products__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  border-color: var(--prod-color);
+}
+
+.hkcl-products__card-top {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+}
+
+.hkcl-products__card-logo-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.hkcl-products__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hkcl-products__card:hover .hkcl-products__card-img {
+  transform: scale(1.06);
+}
+
+.hkcl-products__card-cat {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--prod-color);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.hkcl-products__card-body {
+  padding: 20px 20px 12px;
+  flex: 1;
+}
+
+.hkcl-products__card-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+.hkcl-products__card-tagline {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--prod-color);
+  margin-bottom: 8px;
+}
+
+.hkcl-products__card-desc {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+.hkcl-products__card-footer {
+  padding: 12px 20px 18px;
+}
+
+.hkcl-products__card-link {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--prod-color);
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .hkcl-products__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .hkcl-products__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .hkcl-products__grid { grid-template-columns: 1fr; }
+}

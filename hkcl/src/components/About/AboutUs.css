@@ -1,0 +1,217 @@
+.hkcl-about__mission {
+  padding: 90px 0;
+  background: white;
+}
+
+.hkcl-about__mission-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hkcl-about__mission-text p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-top: 16px;
+}
+
+.hkcl-about__badges {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.hkcl-about__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: var(--off-white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-align: center;
+  min-width: 100px;
+  transition: all 0.25s ease;
+}
+
+.hkcl-about__badge:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.hkcl-about__badge span { font-size: 1.5rem; }
+.hkcl-about__badge strong { font-size: 0.82rem; font-weight: 800; color: var(--secondary); }
+.hkcl-about__badge small { font-size: 0.68rem; color: var(--gray); }
+
+.hkcl-about__mission-img img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* VMV */
+.hkcl-about__vmv {
+  padding: 80px 0;
+  background: var(--off-white);
+}
+
+.hkcl-about__vmv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hkcl-about__vmv-card {
+  background: white;
+  border-radius: 20px;
+  padding: 36px 28px;
+  border-top: 4px solid var(--vmv-color);
+  transition: all 0.3s ease;
+}
+
+.hkcl-about__vmv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.09);
+}
+
+.hkcl-about__vmv-icon {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+}
+
+.hkcl-about__vmv-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+.hkcl-about__vmv-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Timeline */
+.hkcl-about__timeline {
+  padding: 90px 0;
+  background: white;
+}
+
+.hkcl-about__timeline-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hkcl-about__tl-items {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hkcl-about__tl-items::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  transform: translateX(-50%);
+}
+
+.hkcl-about__tl-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.hkcl-about__tl-item.left { justify-content: flex-end; padding-right: calc(50% + 40px); }
+.hkcl-about__tl-item.right { justify-content: flex-start; padding-left: calc(50% + 40px); }
+
+.hkcl-about__tl-dot {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background: var(--primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.hkcl-about__tl-card {
+  background: var(--off-white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: 14px;
+  padding: 20px 22px;
+  max-width: 320px;
+  width: 100%;
+}
+
+.hkcl-about__tl-year {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+
+.hkcl-about__tl-card h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 6px;
+}
+
+.hkcl-about__tl-card p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.55;
+}
+
+/* CTA */
+.hkcl-about__cta {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  padding: 70px 0;
+}
+
+.hkcl-about__cta-inner {
+  text-align: center;
+}
+
+.hkcl-about__cta h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.hkcl-about__cta p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .hkcl-about__mission-inner { grid-template-columns: 1fr; }
+  .hkcl-about__vmv-grid { grid-template-columns: 1fr; }
+  .hkcl-about__tl-items::before { left: 16px; }
+  .hkcl-about__tl-item.left,
+  .hkcl-about__tl-item.right {
+    padding-left: 52px;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+  .hkcl-about__tl-dot { left: 16px; }
+  .hkcl-about__tl-card { max-width: 100%; }
+}

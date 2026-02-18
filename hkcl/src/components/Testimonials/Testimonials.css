@@ -1,0 +1,113 @@
+.hkcl-testi {
+  padding: 90px 0;
+  background: var(--off-white);
+}
+
+.hkcl-testi__header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.hkcl-testi__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.hkcl-testi__tab {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 24px;
+  border-radius: 100px;
+  border: 2px solid var(--light-gray);
+  background: white;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.hkcl-testi__tab:hover { border-color: var(--primary); color: var(--primary); }
+
+.hkcl-testi__tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.hkcl-testi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hkcl-testi__card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  border: 1.5px solid rgba(0,0,0,0.06);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hkcl-testi__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.09);
+}
+
+.hkcl-testi__quote {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 0.8;
+  margin-bottom: 16px;
+  font-family: Georgia, serif;
+  opacity: 0.3;
+}
+
+.hkcl-testi__text {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.hkcl-testi__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--light-gray);
+  padding-top: 18px;
+}
+
+.hkcl-testi__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.hkcl-testi__author strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.hkcl-testi__author span {
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .hkcl-testi__grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
+}
+
+@media (max-width: 600px) {
+  .hkcl-testi { padding: 60px 0; }
+}

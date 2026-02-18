@@ -1,0 +1,218 @@
+/* Newsletter */
+.hkcl-footer__newsletter {
+  background: var(--primary);
+  padding: 40px 0;
+}
+
+.hkcl-footer__newsletter-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hkcl-footer__newsletter h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.hkcl-footer__newsletter p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.88rem;
+}
+
+.hkcl-footer__newsletter-form {
+  display: flex;
+  gap: 0;
+  flex-shrink: 0;
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.hkcl-footer__email-input {
+  padding: 13px 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.88rem;
+  border: none;
+  outline: none;
+  width: 280px;
+  background: white;
+}
+
+.hkcl-footer__subscribe-btn {
+  padding: 13px 24px;
+  background: var(--secondary);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  white-space: nowrap;
+}
+
+.hkcl-footer__subscribe-btn:hover {
+  background: var(--secondary-dark);
+}
+
+/* Main footer */
+.hkcl-footer__main {
+  background: #0f1923;
+  padding: 60px 0 40px;
+}
+
+.hkcl-footer__main-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand */
+.hkcl-footer__logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 16px;
+
+  opacity: 0.9;
+}
+
+.hkcl-footer__brand-desc {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.84rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  max-width: 320px;
+}
+
+.hkcl-footer__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.hkcl-footer__contact-info p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.hkcl-footer__legal {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hkcl-footer__legal span {
+  color: rgba(255,255,255,0.35);
+  font-size: 0.72rem;
+}
+
+/* Columns */
+.hkcl-footer__col h4 {
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.hkcl-footer__col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.hkcl-footer__col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hkcl-footer__col ul li a {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hkcl-footer__col ul li a::before {
+  content: '›';
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.hkcl-footer__col ul li a:hover {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Bottom */
+.hkcl-footer__bottom {
+  background: #080e14;
+  padding: 18px 0;
+}
+
+.hkcl-footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hkcl-footer__bottom p {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.8rem;
+}
+
+.hkcl-footer__bottom strong { color: var(--primary); }
+
+.hkcl-footer__socials {
+  display: flex;
+  gap: 8px;
+}
+
+.hkcl-footer__social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.hkcl-footer__social-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1100px) {
+  .hkcl-footer__main-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+
+@media (max-width: 700px) {
+  .hkcl-footer__main-inner { grid-template-columns: 1fr; }
+  .hkcl-footer__newsletter-inner { flex-direction: column; align-items: flex-start; }
+  .hkcl-footer__newsletter-form { width: 100%; }
+  .hkcl-footer__email-input { flex: 1; width: auto; }
+  .hkcl-footer__bottom-inner { flex-direction: column; text-align: center; }
+}

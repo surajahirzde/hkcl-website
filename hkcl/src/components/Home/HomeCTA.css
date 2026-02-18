@@ -1,0 +1,140 @@
+.hkcl-hcta {
+  position: relative;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.hkcl-hcta__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--secondary-dark) 0%, #0d2233 50%, #1a0a30 100%);
+}
+
+.hkcl-hcta__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(232,97,10,0.2) 0%, transparent 55%),
+              radial-gradient(circle at 20% 80%, rgba(27,58,75,0.5) 0%, transparent 50%);
+}
+
+.hkcl-hcta__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hkcl-hcta__title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.2;
+  margin: 16px 0;
+}
+
+.hkcl-hcta__sub {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 420px;
+}
+
+.hkcl-hcta__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hkcl-hcta__btn-main {
+  display: inline-flex;
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 14px 30px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(232,97,10,0.35);
+}
+
+.hkcl-hcta__btn-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(232,97,10,0.45);
+}
+
+.hkcl-hcta__btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: 2px solid rgba(255,255,255,0.3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hkcl-hcta__btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.7);
+}
+
+.hkcl-hcta__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hkcl-hcta__card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.hkcl-hcta__card:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(6px);
+}
+
+.hkcl-hcta__card-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.hkcl-hcta__card strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 3px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.hkcl-hcta__card span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .hkcl-hcta__inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .hkcl-hcta { padding: 60px 0; }
+}

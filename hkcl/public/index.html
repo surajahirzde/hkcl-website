@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HKCL Website</title>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+   const oldText = /HKCL/i;  // case-insensitive
+
+    const newText = "Chagans Technologies Limited";
+    function replaceTextInNode(node) {
+      if (node.nodeType === Node.TEXT_NODE) { node.textContent = node.textContent.replace(oldText, newText); }
+      else {
+        for (const child of node.childNodes) { replaceTextInNode(child); }
+      }
+    } // Replace in the entire document body replaceTextInNode(document.body); // Observe dynamic changes (e.g., for SPA frameworks) 
+    const observer = new MutationObserver((mutations) => { for (const mutation of mutations) { for (const node of mutation.addedNodes) { replaceTextInNode(node); } } }); observer.observe(document.body, { childList: true, subtree: true, });
+  });
+</script>
+
+</html>

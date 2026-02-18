@@ -1,0 +1,149 @@
+.hkcl-dir__intro {
+  padding: 90px 0;
+  background: white;
+}
+
+.hkcl-dir__intro-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hkcl-dir__intro-text p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-top: 14px;
+}
+
+.hkcl-dir__intro-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.hkcl-dir__intro-stat {
+  background: var(--off-white);
+  border: 1.5px solid var(--light-gray);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.hkcl-dir__intro-stat:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.hkcl-dir__intro-stat strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--primary);
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 4px;
+}
+
+.hkcl-dir__intro-stat span {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* Grid */
+.hkcl-dir__grid-section {
+  padding: 20px 0 90px;
+  background: var(--off-white);
+}
+
+.hkcl-dir__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.hkcl-dir__card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.hkcl-dir__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
+}
+
+.hkcl-dir__card-top {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+}
+
+.hkcl-dir__card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.9;
+}
+
+.hkcl-dir__card-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.hkcl-dir__card-body {
+  padding: 24px 24px 28px;
+}
+
+.hkcl-dir__card-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+.hkcl-dir__card-role {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.hkcl-dir__card-dept {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--gray);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hkcl-dir__card-bio {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .hkcl-dir__grid { grid-template-columns: repeat(2, 1fr); }
+  .hkcl-dir__intro-inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hkcl-dir__grid { grid-template-columns: 1fr; }
+}
