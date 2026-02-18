@@ -10,7 +10,7 @@ const slides = [
     desc: '378 Affiliated Colleges & Institutions and 5,60,525 Students in Haryana since last 6 years.',
     cta: 'Explore Programs',
     ctaLink: '/products',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=900&q=80',
+    image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg',
     accent: '#E8610A',
   },
   {
